@@ -1,0 +1,18 @@
+<div class="formBody">
+  <div>
+    <label>Task : </label>
+    <input type="text" name="" placeholder="Task name.."  [(ngModel)]="task.toDoName">
+    <label>Categorie : </label>
+    <select name="" id=""  [(ngModel)]="task.categorie"> 
+      <option  *ngFor="let categorie of categories"  [ngValue]="categorie">{{ categorie.name }}</option>
+    </select>
+    <button (click)="addTask()" class='button'>Add Task</button>
+    <button (click)="updateTask()" class='button'>Update</button>
+    <button (click)="deleteTask()" class='button'>Delete</button>
+    <br>
+  </div>
+  <label>Task description : </label>
+  <br>
+  <textarea name="Description" id="" cols="150" rows="10" placeholder="Task description.."  [(ngModel)]="task.description"></textarea>
+
+</div>
