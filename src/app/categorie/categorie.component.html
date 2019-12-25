@@ -1,0 +1,18 @@
+
+<div class="formBody">
+  <div>
+    <label>Task : </label>
+    <input type="text" name="" placeholder="Category name.."  [(ngModel)]="Category.name" (keypress)="keyPress($event)">
+   
+    <button (click)="addCategory()" class='button'>Add Category</button>
+    <div class="succesLabel">
+      <span [ngClass]="{'defaultState': AddedCategory, 'succesState': !AddedCategory}"><i class="fas" [ngClass]="{'fa-exclamation': AddedCategory,'fa-check-circle': !AddedCategory}"></i></span>
+      <p [ngClass]="{'defaultState': AddedCategory, 'succesState': !AddedCategory}">   {{message}}</p>
+    </div>
+    <br>
+  </div>
+  <label>Categorie : </label>
+   <br>
+  <textarea name="Description" id="" cols="150" rows="10" placeholder="Categorie description.."   [(ngModel)]="Category.description"></textarea>
+
+</div>
