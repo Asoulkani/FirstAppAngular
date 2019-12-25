@@ -71,3 +71,8 @@ select
     font-size: 0.7em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.buttonDisplay
+{
+    display: none;
+}

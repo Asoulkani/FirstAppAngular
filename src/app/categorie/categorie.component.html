@@ -8,6 +8,7 @@
     <div class="succesLabel">
       <span [ngClass]="{'defaultState': AddedCategory, 'succesState': !AddedCategory}"><i class="fas" [ngClass]="{'fa-exclamation': AddedCategory,'fa-check-circle': !AddedCategory}"></i></span>
       <p [ngClass]="{'defaultState': AddedCategory, 'succesState': !AddedCategory}">   {{message}}</p>
+      <button class='button' [ngClass]="{'buttonDisplay': AddedCategory}" >Return to To Do List</button>
     </div>
     <br>
   </div>
