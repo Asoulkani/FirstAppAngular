@@ -19,11 +19,16 @@ export class CategorieServicesService {
   }
 
   insertCategorie(categorie: Categorie) {
+    for (let i = 0; i < this.categories.length; i++) {
+      if (this.categories[i].getName() === (categorie.getName())) {
+        return false;
+      }
+    }
     this.categories.push(categorie);
+    return true;
   }
 
-  getAll()
-  {
+  getAll() {
     return this.categories;
   }
 

@@ -1,0 +1,18 @@
+
+<form (ngSubmit)="onSubmit()" class="formBody" [formGroup]="catForm"> 
+  <div>
+    <label>Task : </label>
+    <input type="text" name="category" placeholder="Category name.." formControlName="name">
+   
+    <button type="submit" [disabled]="!catForm.valid"  class='button'>Add Category</button>
+    <div class="succesLabel">
+      <span *ngIf="!catForm.valid && catForm.touched" ><i class="message fas" [ngClass]="{'fa-exclamation': AddedCategory,'fa-check-circle': !AddedCategory}"></i></span>
+      <p *ngIf="!catForm.valid && catForm.touched" class="message"> Incorrect data !!</p>
+    </div>
+    <br>
+  </div>
+  <label>Categorie : </label>
+   <br>
+  <textarea name="Description"  cols="150" rows="10" placeholder="Categorie description.."   formControlName="description" required></textarea>
+  
+</form>

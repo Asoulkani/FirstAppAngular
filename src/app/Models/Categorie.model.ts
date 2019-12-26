@@ -14,4 +14,8 @@ export class Categorie {
     isEmpty() {
         return (this.name === '' || this.description === '') ? true : false;
     }
+
+    getName() {
+        return this.name;
+    }
 }

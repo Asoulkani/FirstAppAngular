@@ -1,0 +1,19 @@
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="formBody">
+
+  <div ngModelGroup="userData" #userData="ngModelGroup">
+    <label>Task : </label>
+    <input type="text" name="category" placeholder="Category name.." ngModel required>
+   
+    <button type="submit" [disabled]="!f.valid"  class='button'>Add Category</button>
+    <div class="succesLabel">
+      <span *ngIf="!userData.valid && userData.touched" ><i class="message fas" [ngClass]="{'fa-exclamation': AddedCategory,'fa-check-circle': !AddedCategory}"></i></span>
+      <p *ngIf="!userData.valid && userData.touched" class="message"> Incorrect data !!</p>
+    </div>
+    <br>
+  </div>
+  <label>Categorie : </label>
+   <br>
+  <textarea name="Description"  cols="150" rows="10" placeholder="Categorie description.."   ngModel required></textarea>
+  
+</form>

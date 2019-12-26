@@ -4,7 +4,7 @@
     <table class="fl-table">
         <thead>
         <tr>
-            <th><input type="checkbox"></th>
+            <th><button>X</button></th>
             <th>To Do</th>
             <th>Description</th>
             <th>Categorie</th>
@@ -16,7 +16,7 @@
         </thead>
         <tbody *ngFor="let task of tasks; let index = index;">
         <tr id="{{ index }}"   [appColorStatus]="task.status"  >
-            <td><input type="checkbox" (click)="deleteTask(index)"></td>
+            <td><button  (click)="deleteTask(index)">X</button></td>
             <td>{{  task.toDoName | uppercase }}</td>
             <td (click)="showDetails(task)" >{{  task.description | pipeText:20 }}</td>
             <td>{{  task.categorie.name }}</td>
